@@ -1,0 +1,12 @@
+{
+  "name": "opencensus_zpages",
+  "private": true,
+  "scripts": {
+    "build": "parcel build -d ../priv/static index.ts main.css"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.11.0",
+    "postcss-preset-env": "^6.5.0",
+    "typescript": "^3.2.4"
+  }
+}

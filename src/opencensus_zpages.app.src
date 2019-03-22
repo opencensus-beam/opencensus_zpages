@@ -1,0 +1,20 @@
+{application, opencensus_zpages,
+ [{description, "Erlang implementation of OpenCensus zPages debugging"},
+  {vsn, git},
+  {registered, []},
+  {mod, {opencensus_zpages_app, []}},
+  {applications,
+   [kernel,
+    stdlib,
+    cowboy,
+    opencensus
+   ]},
+  {env, [
+         {cowboy, [{port, 5555}]}
+        ]},
+  {modules, []},
+
+  {maintainers, []},
+  {licenses, ["Apache 2.0"]},
+  {links, []}
+ ]}.

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>OpenCensus zPage | Traces</title>
+        <link rel="stylesheet" href="/assets/main.css" />
+        <script async defer src="/assets/index.js"></script>
+    </head>
+    <body>
+        <h1>OpenCensus - Metrics</h1>
+        {% for view in metrics %}
+        <div id="{{ view.name }}">
+        <h2>{{ view.name }}</h2>
+        <p>{{ view.description }}</p>
+        {% for row in view.data %}
+        <h3>Tags:</h3>
+        <ul>
+            {% for key, value in row.tags %}
+            <li>{{ key }}: {{ value }}</li>
+            {% endfor %}
+        </ul>
+        <h4>Values:</h4>
+        <ul {% for key, value in row.tags %}data-{{ key }}="{{ value }}"{% endfor %}>
+            <li>{{ row.value.count }}</li>
+            <li>{{ row.value.mean }}</li>
+            <li>{{ row.value.sum }}</li>
+        </ul>
+        {% endfor %}
+        </div>
+        {% endfor %}
+    </body>
+</html>

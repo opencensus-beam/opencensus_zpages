@@ -1,0 +1,10 @@
+<html>
+    <head>
+        <title>OpenCensus zPage | Traces</title>
+        <link rel="stylesheet" href="/assets/main.css" />
+        <script async defer src="/assets/index.js"></script>
+    </head>
+    <body>
+        Test
+    </body>
+</html>
